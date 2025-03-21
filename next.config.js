@@ -20,10 +20,12 @@ module.exports = {
         return [
             {
                 source: '/api/getNextProps',
-                headers: [ {
-                    key: 'Access-Control-Allow-Origin',
-                    value: '*'
-                } ]
+                headers: [
+                    { key: "Access-Control-Allow-Origin", value: "*" },
+                    { key: "Access-Control-Allow-Methods", value: "GET,OPTIONS,POST,PUT" },
+                    { key: "Access-Control-Allow-Headers", value: "Authorization, Content-Type" },
+                    { key: "Access-Control-Allow-Credentials", value: "true" }
+                ]
             },
             {
                 source: '/asset-manifest.json',
