@@ -53,7 +53,7 @@ export async function getServerSideProps(context) {
     host: NEXT_PUBLIC_AEM_HOST,
     options: {
       headers: {
-        Authorization: 'Basic YWRtaW46YWRtaW4=',
+        Authorization: 'Basic c2hpdnByYXNhZC5raGFyYWRlQGFsZXBoLWxhYnMuY29tOkFwcGxlQDIwMjU=',
       },
     },
   });
