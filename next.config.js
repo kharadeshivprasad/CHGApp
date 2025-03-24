@@ -26,6 +26,13 @@ module.exports = {
                 } ]
             },
             {
+                source: '/manifest.json',
+                headers: [ {
+                    key: 'Access-Control-Allow-Origin',
+                    value: '*'
+                } ]
+            },
+            {
                 source: '/asset-manifest.json',
                 headers: [ {
                     key: 'Access-Control-Allow-Origin',
