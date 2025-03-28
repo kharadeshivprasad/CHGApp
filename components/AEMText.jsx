@@ -28,10 +28,10 @@ export const Text = (props) => {
     const { richText, text } = props;
     const textCss = "text-gray-800 py-4 sm:py-2 lg:py-6";
     const richTextContent = () => (
-        <div className={textCss} dangerouslySetInnerHTML={{__html: text}} />
+        <div itemProp='headline' itemType='text' className={textCss} dangerouslySetInnerHTML={{__html: text}} />
     );
     const normalTextContent = () => (
-        <div className={textCss}>{text}</div>
+        <div itemProp='headline' itemType='text' className={textCss}>{text}</div>
     );
     return richText ? richTextContent() : normalTextContent();
 };

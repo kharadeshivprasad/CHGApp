@@ -26,6 +26,9 @@ export default function Home({ model, pagePath, pages }) {
     <Layout pages={pages}>
       <Head>
         <title>{model.title}</title>
+        <meta name="urn:adobe:aem:editor:aemconnection" content="aem:http://localhost:4502"></meta>
+        <meta name="urn:adobe:aem:editor:aemconnection" content="aem:https://author-p152536-e1586007.adobeaemcloud.com"></meta>
+        <script src="https://universal-editor-service.adobe.io/cors.js" async></script>
       </Head>
       <section>
         <div className="px-2 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:py-2 lg:py-6">
@@ -53,7 +56,8 @@ export async function getServerSideProps(context) {
     host: NEXT_PUBLIC_AEM_HOST,
     options: {
       headers: {
-        Authorization: 'Basic c2hpdnByYXNhZC5raGFyYWRlQGFsZXBoLWxhYnMuY29tOkFwcGxlQDIwMjU=',
+        Authorization: 'Basic YWRtaW46YWRtaW4=',
+        //Authorization: 'Basic c2hpdnByYXNhZC5raGFyYWRlQGFsZXBoLWxhYnMuY29tOkFwcGxlQDIwMjU=',
       },
     },
   });
